@@ -1,0 +1,24 @@
+---
+import '../styles/globals.css'
+import { LandingContent } from '../components/landing/landing-content'
+---
+
+<html lang="es" class="bg-background scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Revil - Compra Seguidores de Instagram</title>
+    <meta name="description" content="El servicio #1 para comprar seguidores reales de Instagram. Crece tu cuenta de forma segura y rápida." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="font-sans antialiased">
+    <main class="min-h-screen bg-background">
+      <LandingContent client:load />
+    </main>
+  </body>
+</html>
+
