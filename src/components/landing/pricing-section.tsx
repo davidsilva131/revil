@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check, Star, Zap } from "lucide-react"
@@ -24,7 +24,12 @@ function formatUSD(amount: number) {
 
 export function PricingSection() {
   const [currency, setCurrency] = useState<"COP" | "USD">("COP")
-  const { t } = useLanguage()
+  const { lang, t } = useLanguage()
+
+  useEffect(() => {
+    if (lang === "en") setCurrency("USD")
+    else setCurrency("COP")
+  }, [lang])
 
   const plans = planData.map((data, i) => ({
     ...data,
@@ -52,29 +57,31 @@ export function PricingSection() {
             {t.pricing.description}
           </p>
 
-          {/* Currency toggle */}
-          <div className="mt-8 inline-flex items-center rounded-full border border-border bg-card p-1 gap-1">
-            <button
-              onClick={() => setCurrency("COP")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                currency === "COP"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {t.pricing.cop}
-            </button>
-            <button
-              onClick={() => setCurrency("USD")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                currency === "USD"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {t.pricing.usd}
-            </button>
-          </div>
+          {/* Currency toggle — only visible in Spanish */}
+          {lang === "es" && (
+            <div className="mt-8 inline-flex items-center rounded-full border border-border bg-card p-1 gap-1">
+              <button
+                onClick={() => setCurrency("COP")}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                  currency === "COP"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {t.pricing.cop}
+              </button>
+              <button
+                onClick={() => setCurrency("USD")}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                  currency === "USD"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {t.pricing.usd}
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
