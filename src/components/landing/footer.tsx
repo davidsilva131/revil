@@ -15,9 +15,9 @@ export function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Instagram className="w-5 h-5 text-primary-foreground" />
+                <img src="/LOGO_REVIL.jpg" alt="InstaBoost Logo"  />
               </div>
-              <span className="text-xl font-bold text-foreground">InstaBoost</span>
+              <span className="text-xl font-bold text-foreground">Revil</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t.footer.tagline}
@@ -70,10 +70,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             {t.footer.copyright}
           </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Mail className="w-4 h-4" />
-            <span>soporte@instaboost.com</span>
-          </div>
         </div>
       </div>
     </footer>

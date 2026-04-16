@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Instagram, Globe } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import Image from "astro/components/Image.astro"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,7 +17,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Instagram className="w-5 h-5 text-primary-foreground" />
+              <img src="/LOGO_REVIL.jpg" alt="Revil Logo" width={32} height={32} />
             </div>
             <span className="text-xl font-bold text-foreground">Revil</span>
           </div>

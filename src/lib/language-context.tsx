@@ -104,7 +104,7 @@ export const translations = {
       services: { title: "Servicios", links: ["Comprar Seguidores", "Comprar Likes", "Comprar Vistas", "Comprar Comentarios"] },
       company: { title: "Empresa", links: ["Sobre Nosotros", "Blog", "Testimonios", "Afiliados"] },
       support: { title: "Soporte", links: ["Centro de Ayuda", "Contacto", "Términos de Servicio", "Política de Privacidad"] },
-      copyright: "© 2026 InstaBoost. Todos los derechos reservados.",
+      copyright: "© 2026 Revil. Todos los derechos reservados.",
     },
   },
   en: {
@@ -206,7 +206,7 @@ export const translations = {
       services: { title: "Services", links: ["Buy Followers", "Buy Likes", "Buy Views", "Buy Comments"] },
       company: { title: "Company", links: ["About Us", "Blog", "Testimonials", "Affiliates"] },
       support: { title: "Support", links: ["Help Center", "Contact", "Terms of Service", "Privacy Policy"] },
-      copyright: "© 2026 InstaBoost. All rights reserved.",
+      copyright: "© 2026 Revil. All rights reserved.",
     },
   },
 }
