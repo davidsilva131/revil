@@ -26,9 +26,6 @@ export function Footer() {
               <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors">
                 <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors">
-                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors">
                 <MessageCircle className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
@@ -40,7 +37,7 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">{t.footer.services.title}</h3>
             <ul className="space-y-3">
               {t.footer.services.links.map((link, i) => (
-                <li key={i}><a href="#" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
+                <li key={i}><a href="#precios" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
               ))}
             </ul>
           </div>
@@ -50,7 +47,7 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">{t.footer.company.title}</h3>
             <ul className="space-y-3">
               {t.footer.company.links.map((link, i) => (
-                <li key={i}><a href="#" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
+                <li key={i}><a href="#testimonios" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
               ))}
             </ul>
           </div>
@@ -60,7 +57,7 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">{t.footer.support.title}</h3>
             <ul className="space-y-3">
               {t.footer.support.links.map((link, i) => (
-                <li key={i}><a href="#" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
+                <li key={i}><a href={waUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{link}</a></li>
               ))}
             </ul>
           </div>
